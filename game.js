@@ -19,13 +19,19 @@ function gamePlay(playerSelection, computerSelection) {
     console.log("Player: " + playerSelection);
     console.log("Computer: " + computerSelection);
 
-    if (playerSelection === "rock" && computerSelection === "scissors" || playerSelection === "scissors" && computerSelection === "paper" || playerSelection === "paper" && computerSelection === "rock") {
+    if (playerSelection === "rock" && computerSelection === "scissors"
+        || playerSelection === "scissors" && computerSelection === "paper"
+        || playerSelection === "paper" && computerSelection === "rock") {
         return "You Win! " + playerSelection + " beats " + computerSelection;
-    } else if (playerSelection === "rock" && computerSelection === "rock" || playerSelection === "scissors" && computerSelection === "scissors" || playerSelection === "paper" && computerSelection === "paper") {
+    } else if (playerSelection === "rock" && computerSelection === "rock"
+        || playerSelection === "scissors" && computerSelection === "scissors"
+        || playerSelection === "paper" && computerSelection === "paper") {
         return "Tie!";
-    } else if (playerSelection === "scissors" && computerSelection === "rock" || playerSelection === "paper" && computerSelection === "scissors" || playerSelection === "rock" && computerSelection === "paper") {
+    } else if (playerSelection === "scissors" && computerSelection === "rock"
+        || playerSelection === "paper" && computerSelection === "scissors"
+        || playerSelection === "rock" && computerSelection === "paper") {
         return "You Lose! " + computerSelection + " beats  " + playerSelection;
-    }  else {
+    } else {
         return "Invalid Entry";
     }
 
@@ -40,20 +46,20 @@ function game(round) {
         let result = gamePlay();
         console.log(result);
 
-        if(result.startsWith("You Win")){
+        if (result.startsWith("You Win")) {
             playerWins++;
-        } else if (result.startsWith("You Lose")){
+        } else if (result.startsWith("You Lose")) {
             computerWins++;
         }
     }
 
-    if (playerWins > computerWins){
-        return "You Win!"; 
-       } else if (playerWins < computerWins){
+    if (playerWins > computerWins) {
+        return "You Win!";
+    } else if (playerWins < computerWins) {
         return "Computer Wins";
-       } else {
+    } else {
         return "It's a Tie";
-       }
+    }
 }
 
 
