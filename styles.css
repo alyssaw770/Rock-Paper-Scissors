@@ -1,0 +1,125 @@
+html, body{
+    padding: 0;
+    margin: 0;
+    background-color:burlywood;
+    /* height: 100%; */
+}
+
+.heading{
+    height: 100px;
+    background-color:darkorange ;
+}
+.headTitle{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; 
+    flex-wrap: wrap;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+    padding-top: 30px;
+}
+
+.selectionTitle{
+    background-color: rgb(97, 99, 101);
+    color: aliceblue;
+    margin: 0;
+    padding: 0;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.buttons{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 200px;
+    /* border: 2px solid black; */
+    position: relative;
+    padding-top: 10%;
+}
+
+ #rock, #paper, #scissors {
+   border-radius: 50%;
+   width: 10%;
+   height: 100%;
+   background-color:darkorange;
+   border: 5px solid black;
+   font-size: large;
+   text-align: center;
+   font-weight: bold;
+   margin-right: 100px;
+   margin-left: 100px;
+}
+
+.logo{
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    width: 80px;
+}
+
+#results, .score{
+    text-align: center;
+    font-size: larger;
+    font-weight: bold;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-top: 50px;
+}
+
+.again{
+    display: flex;
+    justify-content: center;
+}
+
+.playAgain{
+    border-radius: 5px;
+    width: 100px;
+    height: 40px;
+    background-color: rgb(97, 99, 101);
+    border: 3px solid black;
+    font-size: 15px;
+    font-weight: bold;
+    color: aliceblue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+footer{
+    position: fixed;
+    height: 40px;
+    width: 100%;
+    margin: 0;
+    bottom: 0;
+    background-color:rgb(97, 99, 101);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: medium;
+    font-weight: bold;
+    color: aliceblue;
+}
+
+@media screen and (max-width: 1000px) {
+    #rock, #paper, #scissors{
+        width: 20%;
+        height: 50%;
+        margin-bottom: 15px;
+        font-size: small;
+    }
+
+    #results, .score{
+        padding-top:25%;
+    }
+
+   .headTitle{
+        font-size: medium;
+        
+    }
+    
+    .logo{
+        width: 30px;
+    }
+}
