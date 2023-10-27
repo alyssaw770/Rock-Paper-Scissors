@@ -9,11 +9,12 @@ html, body{
     height: 100px;
     background-color:darkorange ;
 }
-h1{
+.headTitle{
     padding: 0;
     margin: 0;
     display: flex;
     justify-content: center; 
+    flex-wrap: wrap;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
     padding-top: 30px;
 }
@@ -32,6 +33,7 @@ h1{
 
 .buttons{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     height: 200px;
     /* border: 2px solid black; */
@@ -98,4 +100,26 @@ footer{
     font-size: medium;
     font-weight: bold;
     color: aliceblue;
+}
+
+@media screen and (max-width: 1000px) {
+    #rock, #paper, #scissors{
+        width: 20%;
+        height: 50%;
+        margin-bottom: 15px;
+        font-size: small;
+    }
+
+    #results, .score{
+        padding-top:25%;
+    }
+
+   .headTitle{
+        font-size: medium;
+        
+    }
+    
+    .logo{
+        width: 30px;
+    }
 }
