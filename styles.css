@@ -1,25 +1,27 @@
-html, body{
+html,
+body {
     padding: 0;
     margin: 0;
-    background-color:burlywood;
+    background-color: burlywood;
     /* height: 100%; */
 }
 
-.heading{
+.heading {
     height: 100px;
-    background-color:darkorange ;
+    background-color: darkorange;
 }
-.headTitle{
+
+.headTitle {
     padding: 0;
     margin: 0;
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     flex-wrap: wrap;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     padding-top: 30px;
 }
 
-.selectionTitle{
+.selectionTitle {
     background-color: rgb(97, 99, 101);
     color: aliceblue;
     margin: 0;
@@ -31,50 +33,52 @@ html, body{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.buttons{
+.buttons {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     height: 200px;
-    /* border: 2px solid black; */
     position: relative;
-    padding-top: 10%;
+    padding-top: 2%;
 }
 
- #rock, #paper, #scissors {
-   border-radius: 50%;
-   width: 10%;
-   height: 100%;
-   background-color:darkorange;
-   border: 5px solid black;
-   font-size: large;
-   text-align: center;
-   font-weight: bold;
-   margin-right: 100px;
-   margin-left: 100px;
+#rock,
+#paper,
+#scissors {
+    border-radius: 15%;
+    width: 10%;
+    height: 80%;
+    background-color: darkorange;
+    border: 5px solid black;
+    font-size: large;
+    text-align: center;
+    font-weight: bold;
+    margin-right: 100px;
+    margin-left: 100px;
 }
 
-.logo{
+.logo {
     position: absolute;
     top: 10px;
     left: 20px;
     width: 80px;
 }
 
-#results, .score{
+#results,
+.score {
     text-align: center;
-    font-size: larger;
+    font-size:x-large;
     font-weight: bold;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    padding-top: 50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-top: 2%;
 }
 
-.again{
+.again {
     display: flex;
     justify-content: center;
 }
 
-.playAgain{
+.playAgain {
     border-radius: 5px;
     width: 100px;
     height: 40px;
@@ -84,15 +88,16 @@ html, body{
     font-weight: bold;
     color: aliceblue;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
 }
 
-footer{
+footer {
     position: fixed;
     height: 40px;
     width: 100%;
     margin: 0;
     bottom: 0;
-    background-color:rgb(97, 99, 101);
+    background-color: rgb(97, 99, 101);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -103,23 +108,30 @@ footer{
 }
 
 @media screen and (max-width: 1000px) {
-    #rock, #paper, #scissors{
+
+    #rock,
+    #paper,
+    #scissors {
         width: 20%;
         height: 50%;
         margin-bottom: 15px;
         font-size: small;
     }
 
-    #results, .score{
-        padding-top:25%;
-    }
-
-   .headTitle{
-        font-size: medium;
-        
+    .score {
+        padding-top: 5%;
     }
     
-    .logo{
+    .headTitle {
+        font-size: medium;
+
+    }
+
+    .logo {
         width: 30px;
+    }
+
+    .again {
+        padding: 30%;
     }
 }
