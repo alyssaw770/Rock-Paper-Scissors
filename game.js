@@ -24,11 +24,19 @@ function gamePlay(playerSelection, computerSelection) {
 
 }
 
+function updateScore(playerWins, computerWins) {
+    const playerScore = document.querySelector('.player');
+    const computerScore = document.querySelector('.computer');
+
+    playerScore.textContent = `Player: ${playerWins}`;
+    computerScore.textContent = `Computer: ${computerWins}`;
+}
+
+
 function game() {
     let playerWins = 0;
     let computerWins = 0;
-    let round = 0;
-    const maxRounds = 5;
+    const maxScore = 5;
 
     const rock = document.querySelector('#rock');
     const paper = document.querySelector('#paper');
@@ -49,27 +57,37 @@ function game() {
             } else if (result.startsWith("You Lose")) {
                 computerWins++;
             }
-            round++;
 
-            if (round === maxRounds) {
+            updateScore(playerWins, computerWins);
+
+            if (computerWins === maxScore || playerWins === maxScore) {
+
+                rock.disabled = true;
+                paper.disabled = true;
+                scissors.disabled = true;
+
                 if (playerWins > computerWins) {
                     results.textContent = "You Win!";
-                } else if (playerWins < computerWins) {
+                } else if(playerWins < computerWins) {
                     results.textContent = "Computer Wins";
-                } else {
-                    results.textContent = "It's a Tie";
                 }
 
+
                 setTimeout(() => {
-                    const playAgain = confirm("Play Again?");
+                    const playAgain = document.querySelector('.playAgain');
+
                     if (playAgain) {
-                        round = 0;
-                        playerWins = 0;
-                        computerWins = 0;
-                        results.textContent = "";
+                        playAgain.addEventListener('click', () => {
+                            console.log('clicked');
+                            playerWins = 0;
+                            computerWins = 0;
+                            rock.disabled = false;
+                            paper.disabled = false;
+                            scissors.disabled = false;
+                            updateScore(playerWins, computerWins);
+                        });
                     }
                 }, 0);
-
             }
         });
     });

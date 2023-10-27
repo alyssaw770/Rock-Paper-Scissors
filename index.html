@@ -4,13 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="styles.css">
     <script src="game.js" defer></script>
 </head>
 <body>
-    <div id="container"></div>
+    <div class="heading">
+        <h1>The Ultimate Battle of Rock Paper Scissors</h1>
+        <img class="logo" src="https://cdn-icons-png.flaticon.com/128/6587/6587391.png" alt="">
+    </div>
+    <h2 class="selectionTitle">Make Your Selection</h2>
+    <div id="container">
+    <div class="buttons">   
     <button id="rock" value="rock">Rock</button>
     <button id="paper" value="paper">Paper</button>
     <button id="scissors" value="scissors">Scissors</button>
+    </div>
     <div id="results"></div>
+    <div class="score">
+    <p class="player">Player: 0</p>
+    <p class="computer">Computer: 0</p>
+    </div>
+    <div class="again">
+    <button class="playAgain">Play Again</button>
+    </div>
+    <footer>Copyright &copy 2023 Alyssa Williams for The Odin Project</footer>
+    </div></div>
 </body>
 </html>
